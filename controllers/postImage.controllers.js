@@ -23,12 +23,7 @@ module.exports = {
         data: {
           title,
           description,
-          image: {
-            create: {
-              image_id: fileId,
-              url,
-            },
-          },
+          image: { create: { image_id: fileId, url } },
         },
         include: { image: true },
       });
