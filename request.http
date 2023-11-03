@@ -1,0 +1,28 @@
+### POST UPLOAD
+POST http://localhost:3000/api/v1/images/upload
+Content-Type: application/json
+
+{
+  "title": "six title",
+  "description": "six description",
+  "image":"https://ik.imagekit.io/muhammadalimran/"
+}
+
+
+### GET BY ID
+GET http://localhost:3000/api/v1/images/4
+
+### GET ALL
+GET http://localhost:3000/api/v1/images
+
+### UPDATE ENDPOINT
+PUT http://localhost:3000/api/v1/images/3
+Content-Type: application/json
+
+{
+  "title": "third title update",
+  "description": "third description update"
+}
+
+### DELETE
+DELETE http://localhost:3000/api/v1/images/5
