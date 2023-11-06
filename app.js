@@ -26,7 +26,6 @@ app.use(Sentry.Handlers.requestHandler());
 app.use(Sentry.Handlers.tracingHandler());
 
 app.get("/", (req, res) => {
-  console.log(name);
   return res.json({
     status: true,
     message: "welcome to deployment with railway.app",
@@ -51,7 +50,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({
     status: false,
     message: "Internal Server Error",
-    data: err.message,
+    data: {
+      env: RAILWAY_ENV_NAME,
+    },
   });
 });
 
